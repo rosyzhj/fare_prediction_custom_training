@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Jupyter
+*.nbconvert.ipynb
+
+# Spark / local outputs
+spark-warehouse/
+metastore_db/
+derby.log
+
+# ML artifacts and data dumps
+artifacts/
+models/
+checkpoints/
+*.parquet
+*.feather
+*.orc
+*.h5
+*.pkl
+*.joblib
+
+# Logs
+logs/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
