@@ -1,40 +1,45 @@
-# fare_prediction_custom_training
+# NYC Taxi Fare Prediction (PySpark + GCP)
 
-## Overview
-This course final project builds a scalable machine learning pipeline to predict NYC taxi fares using historical NYC taxi trip data. The system leverages PySpark for distributed data processing and model training and runs on Google Cloud Platform (GCP) infrastructure to efficiently handle large-scale trip datasets.
+A scalable machine learning project that predicts NYC taxi fares from historical trip data using PySpark and GCP.
 
-## Objectives
-- Predict taxi trip fares based on trip characteristics and engineered features.
-- Build a scalable training pipeline using PySpark.
-- Run training and inference workflows in a GCP environment.
+## Why This Project
+This project demonstrates end-to-end ML workflow skills on large transportation data:
+- Distributed data processing with PySpark
+- Feature engineering for tabular regression
+- Cloud-based model training workflow (Vertex AI)
+- Reproducible analysis in notebooks
 
-## Current Repository Structure
-- `data_preparation.ipynb`: Data cleaning and feature preparation notebook.
-- `VertexAI_model_train/task.py`: Vertex AI training entry point script.
-- `VertexAI_model_train/start_training_job.ipynb`: Notebook for launching training jobs.
-- `VertexAI_model_train/model_inferences.ipynb`: Notebook for model inference and evaluation.
-- `report.pdf`: Final report/documentation artifact.
+## Tech Stack
+- Python
+- PySpark
+- XGBoost
+- Scikit-learn
+- Google Cloud Platform (GCS + Vertex AI)
 
-## Suggested Workflow
-1. Prepare features in `data_preparation.ipynb`.
-2. Export a model-ready training dataset to cloud storage.
-3. Launch training via `VertexAI_model_train/task.py` and Vertex AI.
-4. Evaluate with held-out data and validate inference outputs.
-5. Track progress in Git and `PROJECT_PLAN.md`.
+## Repository Structure
+- `data_preparation.ipynb`: data cleaning and feature engineering
+- `VertexAI_model_train/task.py`: training entrypoint for custom training
+- `VertexAI_model_train/start_training_job.ipynb`: launch training jobs
+- `VertexAI_model_train/model_inferences.ipynb`: inference and evaluation checks
+- `report.pdf`: final project report
 
-## Environment Setup
+## How It Works
+1. Prepare and transform trip data.
+2. Build model-ready features.
+3. Train fare prediction model on cloud infrastructure.
+4. Evaluate predictions on hold-out data.
+
+## Run Locally (Core Script)
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-## Run Training Script (Example)
-```bash
 python VertexAI_model_train/task.py --data-path gs://YOUR_BUCKET/path/to/train.csv
 ```
 
-## Notes
-- Do not commit credentials or cloud keys.
-- Keep large raw datasets in cloud/object storage, not in Git.
-- Keep experiment outputs under ignored artifact directories.
+## Portfolio Notes
+Yes, this repo can be used as a portfolio project. To make it stronger:
+- Add one short section with final metrics (R2, RMSE/MAE)
+- Add one architecture diagram screenshot
+- Add 2-3 bullet points on scale (dataset size, runtime, cluster setup)
+
