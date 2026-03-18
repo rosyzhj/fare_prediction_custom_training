@@ -5,3 +5,5 @@ xgboost>=2.0
 pyspark>=3.5
 jupyter>=1.0
 google-cloud-aiplatform>=1.70
+requests>=2.31
+beautifulsoup4>=4.12
