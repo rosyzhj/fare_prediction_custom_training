@@ -34,7 +34,7 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 5. Train the fare prediction model using GCP Vertex AI Custom Training.
 6. Evaluate predictions on hold-out data.
 
-## Data Acquisition (Integrated from your earlier workflow)
+## Data Acquisition
 ```bash
 # 1) Scrape TLC links for yellow taxi parquet files (2024-2025 by default)
 python scripts/extract_tlc_yellow_links.py \
@@ -47,17 +47,3 @@ bash scripts/upload_links_to_gcs.sh \
   data/links/yellow_2024_2025_links.txt \
   gs://YOUR_BUCKET/taxi-data/yellow
 ```
-
-## Run Locally (Core Script)
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python VertexAI_model_train/task.py --data-path gs://YOUR_BUCKET/path/to/train.csv
-```
-
-## Portfolio Notes
-Yes, this repo can be used as a portfolio project. To make it stronger:
-- Add one short section with final metrics (R2, RMSE/MAE)
-- Add one architecture diagram screenshot
-- Add 2-3 bullet points on scale (dataset size, runtime, cluster setup)
