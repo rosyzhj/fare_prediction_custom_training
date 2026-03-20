@@ -26,7 +26,7 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 - `VertexAI_model_train/model_inferences.ipynb`: inference and evaluation checks
 - `report.pdf`: final project report
 
-## How It Works
+## Overview
 1. Extract yellow taxi parquet file links from the TLC trip data page.
 2. Load raw parquet files into GCS for scalable processing.
 3. Prepare and transform trip data.
