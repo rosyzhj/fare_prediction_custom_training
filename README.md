@@ -7,13 +7,6 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 - Cloud-based model training with GCP Vertex AI Custom Training
 - Reproducible analysis in notebooks
 
-## Tech Stack
-- Python
-- PySpark
-- XGBoost
-- Scikit-learn
-- Google Cloud Platform (GCS + Vertex AI Custom Training)
-
 ## Overview
 1. Extract yellow taxi parquet file links from the TLC trip data page.
 2. Load raw parquet files into GCS for scalable processing.
@@ -31,6 +24,13 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 - `VertexAI_model_train/start_training_job.ipynb`: launch training jobs
 - `VertexAI_model_train/model_inferences.ipynb`: inference and evaluation checks
 - `report.pdf`: final project report
+
+## Tech Stack
+- Python
+- PySpark
+- XGBoost
+- Scikit-learn
+- Google Cloud Platform (GCS + Vertex AI Custom Training)
 
 ## Data Acquisition
 ```bash
