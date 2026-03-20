@@ -1,8 +1,6 @@
 # NYC Taxi Fare Prediction (PySpark + Vertex AI Custom Training)
 
 A scalable machine learning project that predicts NYC taxi fares from historical trip data using PySpark and GCP Vertex AI Custom Training.
-
-## Why This Project
 This project demonstrates end-to-end ML workflow skills on large transportation data:
 - Distributed data processing with PySpark
 - Feature engineering for tabular regression
@@ -16,6 +14,14 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 - Scikit-learn
 - Google Cloud Platform (GCS + Vertex AI Custom Training)
 
+## Overview
+1. Extract yellow taxi parquet file links from the TLC trip data page.
+2. Load raw parquet files into GCS for scalable processing.
+3. Prepare and transform trip data.
+4. Build model-ready features.
+5. Train the fare prediction model using GCP Vertex AI Custom Training.
+6. Evaluate predictions on hold-out data.
+
 ## Repository Structure
 - `data_preparation.ipynb`: data cleaning and feature engineering
 - `data/links/yellow_2024_2025_links.txt`: extracted TLC parquet links used for ingestion
@@ -25,14 +31,6 @@ This project demonstrates end-to-end ML workflow skills on large transportation 
 - `VertexAI_model_train/start_training_job.ipynb`: launch training jobs
 - `VertexAI_model_train/model_inferences.ipynb`: inference and evaluation checks
 - `report.pdf`: final project report
-
-## Overview
-1. Extract yellow taxi parquet file links from the TLC trip data page.
-2. Load raw parquet files into GCS for scalable processing.
-3. Prepare and transform trip data.
-4. Build model-ready features.
-5. Train the fare prediction model using GCP Vertex AI Custom Training.
-6. Evaluate predictions on hold-out data.
 
 ## Data Acquisition
 ```bash
